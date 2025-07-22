@@ -1,0 +1,26 @@
+{
+  "name": "chatbot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+  "start-python": "cd python-service && waitress-serve --host 127.0.0.1 --port 8000 app:app",
+  "start-backend": "cd backend && node src/server.js",
+  "start-frontend": "cd frontend && npm run dev",
+  "dev": "concurrently \"npm:start-python\" \"npm:start-backend\" \"npm:start-frontend\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Xcelerity/chatbot.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Xcelerity/chatbot/issues"
+  },
+  "homepage": "https://github.com/Xcelerity/chatbot#readme",
+  "devDependencies": {
+    "concurrently": "^9.2.0"
+  }
+}
